@@ -1,0 +1,45 @@
+:root{
+  --bg: #0f1724;
+  --card: #0b1220;
+  --muted: #9aa6b2;
+  --accent: #2563eb;
+  --danger: #ef4444;
+  --ok: #10b981;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#f6f9fc,#ffffff);margin:0;padding:0}
+.app{max-width:980px;margin:24px auto;padding:16px}
+.app-header h1{margin:0 0 8px}
+.composer{background:#fff;border:1px solid #e6edf3;border-radius:8px;padding:16px}
+.platforms{margin-bottom:12px}
+.platform-list{display:flex;flex-wrap:wrap;gap:8px}
+.platform{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:#f7f9fb;border-radius:6px;border:1px solid #eef3f7}
+.editor textarea{width:100%;min-height:140px;padding:12px;border-radius:8px;border:1px solid #e6edf3;font-size:15px}
+.meta-row{display:flex;justify-content:space-between;gap:12px;margin-top:8px;align-items:flex-start}
+.media-input{flex:1}
+.file-label{display:inline-block;padding:8px 12px;background:var(--accent);color:#fff;border-radius:6px;cursor:pointer}
+.file-label input{display:none}
+.previews{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.preview{position:relative;width:80px;height:80px;border-radius:6px;overflow:hidden;border:1px solid #eef3f7;background:#fff}
+.preview img{width:100%;height:100%;object-fit:cover}
+.preview .file-box{padding:8px;font-size:12px}
+.preview .remove{position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:#fff;border:none;border-radius:50%;width:20px;height:20px;line-height:18px;cursor:pointer}
+.counters{width:160px;text-align:right}
+.remaining{font-weight:600}
+.remaining.over{color:var(--danger)}
+.hashtags{color:var(--muted);font-size:13px}
+.validation{margin-top:12px}
+.pv{padding:8px;border-radius:6px;border:1px solid #eef3f7;margin-bottom:8px}
+.pv.ok{border-left:4px solid var(--ok)}
+.pv.warn{border-left:4px solid #f59e0b}
+.pv.error{border-left:4px solid var(--danger)}
+.errors{color:var(--danger);margin:6px 0 0 12px}
+.warnings{color:#b7791f;margin:6px 0 0 12px}
+.actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+.publish{background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;border:none;cursor:pointer}
+.clear{background:#f3f4f6;border:1px solid #e6edf3;padding:8px 12px;border-radius:6px;cursor:pointer}
+
+@media (max-width:640px){
+  .meta-row{flex-direction:column}
+  .counters{width:100%;text-align:left}
+}
